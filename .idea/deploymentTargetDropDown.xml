@@ -2,13 +2,22 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="TestLayout">
+      <entry key="TestViewModelTest">
         <State />
       </entry>
       <entry key="app">
         <State />
       </entry>
-      <entry key="prev_button">
+      <entry key="correct_answer()">
+        <State />
+      </entry>
+      <entry key="isTestOver()">
+        <State />
+      </entry>
+      <entry key="questionSkipped()">
+        <State />
+      </entry>
+      <entry key="wrong_answer()">
         <State />
       </entry>
     </value>

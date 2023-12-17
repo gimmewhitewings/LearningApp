@@ -14,6 +14,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -51,8 +52,8 @@ fun TestScreen(
         submitAnswer = viewModel::submitAnswer,
         skipQuestion = viewModel::skipQuestion,
         scores = uiState.currentScore,
-        isGameOver = uiState.isGameOver,
-        resetGame = viewModel::resetGame
+        isGameOver = uiState.isTestOver,
+        resetGame = viewModel::resetTest
     )
 }
 
@@ -172,6 +173,10 @@ private fun GameCard(
                 text = question.questionText,
                 style = MaterialTheme.typography.headlineSmall
             )
+            Divider(
+                modifier = Modifier.fillMaxWidth(),
+                color = MaterialTheme.colorScheme.primary
+            )
             question.variants.forEachIndexed { index, variant ->
                 Row(
                     verticalAlignment = Alignment.CenterVertically
@@ -181,6 +186,12 @@ private fun GameCard(
                         onClick = { selectAnswer(index) }
                     )
                     Text(text = variant)
+                }
+                if (index < question.variants.size - 1) {
+                    Divider(
+                        modifier = Modifier.fillMaxWidth(),
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
                 }
             }
             Button(

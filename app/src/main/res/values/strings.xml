@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">LearningApp</string>
+    <string name="math">Math</string>
+    <string name="russian">Russian</string>
+    <string name="physics">Physics</string>
+    <string name="informatics">Informatics</string>
+    <string name="submit">Submit</string>
+    <string name="skip">Skip</string>
+    <string name="score">Score: %1$d</string>
+    <string name="final_score">You\'ve got %1$d scores.</string>
+    <string name="test_is_over">Test is over</string>
+    <string name="restart">Restart</string>
+    <string name="to_the_title_screen">To the title screen</string>
 </resources>
